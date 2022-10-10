@@ -6,8 +6,8 @@ name: react-pipeline
     paths:
       - '**/reactdocker/**'
 env:
-  DOCKER_BUILD_FILE_PATH: ./reactdocker/Dockerfile.build
-  DOCKER_FILE_PATH: ./reactdocker/Dockerfile.publish
+  DOCKER_BUILD_FILE_PATH: ./reactdocker/DockerFile.build
+  DOCKER_FILE_PATH: ./reactdocker/DockerFile.publish
   DOCKER_BUILD_CONTEXT: reactdocker
   DOCKER_PUBLISH_CONTEXT: ./build
   CONTAINER_NAME: react-pipeline-test
