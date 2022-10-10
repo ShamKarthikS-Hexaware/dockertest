@@ -31,7 +31,7 @@ jobs:
       - name: copy build files
         run: |-
           docker cp ${{ env.CONTAINER_NAME }}:/app/build/ ./
-          docker cp ${{ env.CONTAINER_NAME }}:/testresults/ ./
+          docker cp ${{ env.CONTAINER_NAME }}:/coverage/ ./
           docker rm ${{ env.CONTAINER_NAME }}
       - name: Build and  push image to container registry
         run: |-
