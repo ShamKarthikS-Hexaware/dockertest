@@ -44,6 +44,7 @@
         "build": "GENERATE_SOURCEMAP=false react-scripts build",
         "test": "react-scripts test --env=jsdom --verbose --silent",
         "test:dev": "react-scripts test",
+        "test:coverage": "react-scripts test --env=jsdom --verbose --silent --coverage",
         "eject": "react-scripts eject",
         "ghp": "react-scripts build && gh-pages -d build"
     },
