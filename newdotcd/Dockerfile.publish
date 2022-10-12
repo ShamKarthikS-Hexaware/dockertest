@@ -5,5 +5,5 @@ EXPOSE 80
 EXPOSE 443
 
 WORKDIR /app
-COPY ./publish .
+COPY publish .
 ENTRYPOINT ["dotnet", "newdotcd.Api.dll"]
