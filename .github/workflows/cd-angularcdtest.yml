@@ -22,7 +22,7 @@ env:
   REPOSITORY_NAME: angular-pipeline-test
 jobs:
   set-environment:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - if: |
