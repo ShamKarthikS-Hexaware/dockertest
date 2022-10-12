@@ -9,7 +9,7 @@ env:
   DOCKER_BUILD_FILE_PATH: ./reactcdtest/Dockerfile.build
   DOCKER_FILE_PATH: ./reactcdtest/Dockerfile.publish
   DOCKER_BUILD_CONTEXT: reactcdtest
-  DOCKER_PUBLISH_CONTEXT: ./
+  DOCKER_PUBLISH_CONTEXT: reactcdtest
   CONTAINER_NAME: react-pipeline-test
   REPOSITORY_NAME: react-pipeline-test
 jobs:
