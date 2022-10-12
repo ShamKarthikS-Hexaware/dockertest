@@ -17,6 +17,9 @@ import { DemoMaterialModule } from './demo-material-module';
 
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
+import { AddHumanComponent } from "./human/add-human/add-human.component";
+import { EditHumanComponent } from "./human/edit-human/edit-human.component";
+import { ListHumanComponent } from "./human/list-human/list-human.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { SpinnerComponent } from './shared/spinner.component';
     AppHeaderComponent,
     SpinnerComponent,
     AppSidebarComponent,
-  ],
+        AddHumanComponent,
+        EditHumanComponent,
+        ListHumanComponent
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

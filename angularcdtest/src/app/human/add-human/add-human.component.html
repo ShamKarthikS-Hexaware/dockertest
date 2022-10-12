@@ -1,0 +1,31 @@
+<mat-card class="w-100">
+  <mat-card-content>
+    <h4 class="mb-56">Add Form</h4>
+    <form [formGroup]="form" (ngSubmit)="add()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="handleError('name', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Age</mat-label>
+        <input matInput formControlName="age" />
+        <mat-error *ngIf="handleError('age', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Planet</mat-label>
+        <input matInput formControlName="planet" />
+        <mat-error *ngIf="handleError('planet', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Add</button>
+    </form>
+  </mat-card-content>
+</mat-card>
