@@ -1,1 +1,1 @@
-custom react theme crud generator update udated tag for testing
+custom react theme crud generator update udated tag for testing docker
