@@ -1,1 +1,2 @@
-Readme test for docker build updated ./ in path of docker publish
+Readme test for docker build updated ./ in path of docker publish test2
+
