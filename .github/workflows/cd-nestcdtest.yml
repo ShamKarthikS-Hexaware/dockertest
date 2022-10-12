@@ -1,4 +1,4 @@
-name: cd-reactcdtest
+name: cd-nestcdtest
 'on':
   workflow_dispatch:
     inputs:
@@ -11,15 +11,15 @@ name: cd-reactcdtest
         required: true
   workflow_run:
     workflows:
-      - ci-reactcdtest
+      - ci-nestcdtest
     branches:
       - main
     paths:
-      - '**/reactcdtest/**'
+      - '**/nestcdtest/**'
     types:
       - completed
 env:
-  REPOSITORY_NAME: react-pipeline-test
+  REPOSITORY_NAME: nest-pipeline-test
 jobs:
   set-environment:
     runs-on: self-hosted
