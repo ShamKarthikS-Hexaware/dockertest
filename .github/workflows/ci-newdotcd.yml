@@ -14,7 +14,7 @@ env:
   REPOSITORY_NAME: dotnet-pipeline-test
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v3
