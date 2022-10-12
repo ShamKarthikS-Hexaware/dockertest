@@ -3,6 +3,5 @@ WORKDIR /app
 COPY package.json ./
 RUN npm i --production
 COPY dist ./dist
-EXPOSE 8080
-EXPOSE 4000-5000
+EXPOSE 3000
 CMD ["node", "dist/main"] 
