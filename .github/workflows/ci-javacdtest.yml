@@ -31,6 +31,7 @@ jobs:
       - name: copy build files
         run: |-
           docker cp ${{ env.CONTAINER_NAME }}:/app/target/ ./${{ env.DOCKER_PUBLISH_CONTEXT }}
+          docker stop ${{ env.CONTAINER_NAME }}
           docker rm ${{ env.CONTAINER_NAME }}
       - name: Build and  push image to container registry
         run: |-
