@@ -1,4 +1,4 @@
-name: ci-reactant
+name: react-pipeline
 'on':
   push:
     branches:
