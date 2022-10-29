@@ -31,31 +31,9 @@ jobs:
       - name: copy build files
         run: |-
           docker cp ${{ env.CONTAINER_NAME }}:/app/build/ ./${{ env.DOCKER_PUBLISH_CONTEXT }}
+          docker stop ${{ env.CONTAINER_NAME }}
           docker rm ${{ env.CONTAINER_NAME }}
       - name: Build and  push image to container registry
         run: |-
           docker build ${{ env.DOCKER_PUBLISH_CONTEXT }} -f ${{ env.DOCKER_FILE_PATH }} -t ${{ secrets.CR_LOGIN_SERVER }}/${{ env.REPOSITORY_NAME }}:${{ github.run_number }}
           docker push ${{ secrets.CR_LOGIN_SERVER }}/${{ env.REPOSITORY_NAME }}:${{ github.run_number }}
-  build_test:
-      # The type of runner that the job will run on
-      runs-on: ubuntu-latest
-
-      strategy:
-        matrix:
-          node-version: [16.x]
-
-      # Steps represent a sequence of tasks that will be executed as part of the job
-      steps:
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        - uses: actions/checkout@v2
-        - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v2
-          with:
-            node-version: ${{ matrix.node-version }}
-        - name: npm ci, build and test
-          run: |
-            cd reactant
-            ls
-            npm i
-            npm run build --if-present
-            npm test 
