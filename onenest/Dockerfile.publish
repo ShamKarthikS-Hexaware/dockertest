@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm i --production
 COPY dist ./dist
-EXPOSE 3000
+# EXPOSE 3000
 
 # Install OpenSSH and set the password for root to "Docker!". In this example, "apk add" is the install instruction for an Alpine Linux-based image.
 RUN apk add openssh \
@@ -19,6 +19,6 @@ RUN chmod +x /tmp/ssh_setup.sh \
     && (sleep 1;/tmp/ssh_setup.sh 2>&1 > /dev/null)
 
 # Open port 2222 for SSH access
-EXPOSE 80 2222
+EXPOSE 3000 2222
 
 CMD ["node", "dist/main"] 
