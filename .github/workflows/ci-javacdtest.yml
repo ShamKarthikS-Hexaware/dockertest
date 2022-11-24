@@ -37,3 +37,7 @@ jobs:
         run: |-
           docker build ${{ env.DOCKER_BUILD_CONTEXT }} -f ${{ env.DOCKER_FILE_PATH }} -t ${{ secrets.CR_LOGIN_SERVER }}/${{ env.REPOSITORY_NAME }}:${{ github.run_number }}
           docker push ${{ secrets.CR_LOGIN_SERVER }}/${{ env.REPOSITORY_NAME }}:${{ github.run_number }}
+      - name: unittest
+        note: yet to update
+      - name: codecoverage
+        note: yet to update
